@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, .container, .row{
+    display: flex;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    border: 2px solid grey;
+
+}
+
+.row{
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.tile{
+    flex: 1 1 auto;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+}
+
+.tile:last-child{
+    border-right: none !important;
+}
+
+.row:last-child .tile{
+    border-bottom: none;
+}
